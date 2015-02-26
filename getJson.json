@@ -1,8 +1,11 @@
 {
   "lista": [
-    "katt",
-    "hund",
-    "fisk"
+      
+    ["kattunge", "gammal katt"],
+    
+    ["fisk", "ugggla"],
+    
+    ["zebra", "hund"]
+    
   ]
-  
 }
