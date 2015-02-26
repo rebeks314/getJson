@@ -1,36 +1,60 @@
-console.log("work");
-
 $(document).ready(function() {
+    console.log("hej");
 
-    $.getJSON('getJson.json',function(data) {
 
-                $("#div1").text(data.lista);
-                
-                $.each(data.lista, function(key, val){
-                    $('<li id"' + '">').text(val).appendTo("#div1");
-              
-               
-                });
+    $('.grupp').change(function() {
+
+        $.getJSON('getJson.json', function(data) {
+
+//            $('<li>').text(data.namn[0]).appendTo('#div1');
+            $('.subgrupp option').remove();
+            var djur = parseInt($('.grupp').val());
+
+            $.each(data.lista[djur], function(key, val) {
+//                $('<li id="' + key + '">').text(val).appendTo('#div1');
+                $('.subgrupp').append('<option value="'+key+'">'+ val +'</option>');
 
             });
-            
-            $('.grupp').change(function(data) {
-                
-                $('.subgrupp option').remove();
-                
-                switch (data){
-                    
-                    case 0:
-                    case 1:   
-                        
-                
-                
-                $('.subgrupp').append('<option value="0">Liten</option>');
-                $('.subgrupp').append('<option value="0">Stor</option>');
-                console.log("lista");
+        });
+
+
+        console.log(djur);
+        switch (djur) {
+            case 0:
+                console.log("switch 0");
+                $('.subgrupp').append('<option value="1">Stor</option>');
+
+                break;
+            case 1:
+                console.log("switch 1");
+                break;
+            default:
+                console.log("default");
+                break;
+//
+//
+        }
+//        console.log("haj");
+
+    });
+});
+
+$(dokument).ready(function(){
+    
+
+$.getJSON('index.php', function(data) {
+    
+    console.log(data.hundar[0]);
+    
+    $.each(data.lista[djur], function(key, val) {
+    
+
         
-                }
-                
-            });
+    
+    
+    
+});
+
+});
 
 });
