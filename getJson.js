@@ -39,7 +39,7 @@ $(document).ready(function() {
     });
 });
 
-$(dokument).ready(function(){
+$(document).ready(function(){
     
 
 $.getJSON('index.php', function(data) {
@@ -58,3 +58,17 @@ $.getJSON('index.php', function(data) {
 });
 
 });
+
+$(document).ready(function(){
+    $("marke".change(function(){
+     var marke = $('#marke').val();   
+     $.getJSON("index.php",{namn: marke},function(data) {
+    $('ul').append("<li>"+data.hundar[0].namn+"</li>");
+    
+});
+
+});
+
+
+
+    }
