@@ -34,7 +34,7 @@ $(document).ready(function() {
 //
 //
         }
-//        console.log("haj");
+//       
 
     });
 });
@@ -59,16 +59,16 @@ $.getJSON('index.php', function(data) {
 
 });
 
-$(document).ready(function(){
-    $("marke".change(function(){
-     var marke = $('#marke').val();   
-     $.getJSON("index.php",{namn: marke},function(data) {
-    $('ul').append("<li>"+data.hundar[0].namn+"</li>");
-    
-});
-
-});
-
-
-
-    }
+//$(document).ready(function(){
+//    $("marke".change(function(){
+//     var marke = $('#marke').val();   
+//     $.getJSON("index.php",{namn: marke},function(data) {
+//    $('ul').append("<li>"+data.hundar[0].namn+"</li>");
+//    
+//});
+//
+//});
+//
+//
+//
+//    }

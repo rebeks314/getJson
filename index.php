@@ -20,8 +20,8 @@ and open the template in the editor.
         <div id="div1"></div>
         <p class="mule"></p>
         
-<!--         <button class="btn">Button!</button>
-        <button class="read">Läs in JSON</button>-->
+         <button class="btn">Button!</button>
+        <button class="read">Läs in JSON</button>
         
         
          <select name="grupp" class="grupp">
@@ -36,12 +36,38 @@ and open the template in the editor.
          
         
          
-<!--         <script>
+         
+        
+        //<?php
+////        session_start();
+//define("DB_SERVER", "localhost");
+//define("DB_USER", "root");
+//define("DB_PASSWORD", "");
+//define("DB_NAME", "hundar");
+//
+//
+//$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+//
+//$sql = "SELECT * FROM `katter` WHERE 1";
+//     
+//if(isset($_GET["katter"])){
+//  $sql = "SELECT `id`, `namn` FROM `katter` WHERE 1".[GET_katter]."'";
+//}
+//        $stmt = $dbh->prepare($sql);
+//        $stmt->execute();
+//        $produkter["katter"] = $stmt->fetchAll(PDO:: FETCH_ASSOC);
+//        
+//        echo json_encode($produkter);
+//
+//        ?>
+        
+        
+        <script>
 //            console.log("Jacob");
             document.getElementById(".mule").innerHTML = "ny text";
             $('#div1').text("ny text igen");
             $('.btn').click(function() {
-                //$('.btn').hide();
+//                $('.btn').hide();
                 $('.btn').animate(
                         {width: 500, height: 700, left: 1000}, 5000);
                 console.log("klick körs. Knapp gömd.");
@@ -64,32 +90,6 @@ and open the template in the editor.
                     $('.subgrupp').append('<option value="">gg</option>');
                 });
             });
-        </script>-->
-        
-        <?php
-//        session_start();
-define("DB_SERVER", "localhost");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
-define("DB_NAME", "hundar");
-
-
-$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
-
-$sql = "SELECT * FROM `katter` WHERE 1";
-     
-if(isset($_GET["katter"])){
-  $sql = "SELECT `id`, `namn` FROM `katter` WHERE 1".[GET_katter]."'";
-}
-        $stmt = $dbh->prepare($sql);
-        $stmt->execute();
-        $produkter["katter"] = $stmt->fetchAll(PDO:: FETCH_ASSOC);
-        
-        echo json_encode($produkter);
-
-        ?>
-        
-        
-        
+        </script>
     </body>
 </html>
